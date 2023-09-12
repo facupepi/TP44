@@ -11,17 +11,13 @@ vehiculos: Es una lista (ArrayList) de objetos de tipo Vehículo, que almacenar�
 
 */
 {
-    var contadorParcial = 0
-    //Se utiliza para llevar un registro de la cantidad actual de vehículos en el garaje.
-    //Su valor se incrementa al agregar un nuevo vehículo al garage, siempre que no se supere la cantidad maxima
-
     fun agregarVehiculo(vehiculoTemp : Vehiculo){
-        if (contadorParcial==cantidadMaxima){
+
+        if (vehiculos.size==cantidadMaxima){
             println("\n\nGARAGE LLENO - EL SIGUIENTE VEHICULO NO GUARDADO\n $vehiculoTemp")
         }
         else{
             vehiculos.add(vehiculoTemp)
-            contadorParcial++
             println("EL SIGUIENTE VEHICULO FUE GUARDADO! \n $vehiculoTemp")
         }
     }
@@ -37,10 +33,9 @@ vehiculos: Es una lista (ArrayList) de objetos de tipo Vehículo, que almacenar�
 
     fun retirarVehiculo(vehiculoTemp: Vehiculo){
         vehiculos.remove(vehiculoTemp)
-        contadorParcial--
         println("EL SIGUIENTE VEHICULO FUE RETIRADO! \n $vehiculoTemp")
     }
-    // Elimina el vehículo especificado de la lista de vehículos en el garaje y se decrementa el contador de la cantidad de vehiculos almacenados.
+    // Elimina el vehículo especificado de la lista de vehículos en el garaje. Automaticamente la lista lleva la cuenta de objetos mediante vehiculos.size
 
     fun cambiarRuedas() : Double{
         var sumador = 0.0
@@ -53,14 +48,12 @@ vehiculos: Es una lista (ArrayList) de objetos de tipo Vehículo, que almacenar�
 
     fun kilometrajeMedio() : Double {
         var sumador = 0.0
-        var contador = 0
         for(vehiculoTemp in vehiculos){
             sumador += vehiculoTemp.kilometraje
-            contador++
         }
 
-        if(contador!=0){ //Verificacion para no dividir por cero en caso que no haya vehiculos en el garage
-            return sumador / contador
+        if(vehiculos.size!=0){ //Verificacion para no dividir por cero en caso que no haya vehiculos en el garage
+            return sumador / vehiculos.size
         }
         else return 0.0
 
