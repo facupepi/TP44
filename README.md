@@ -22,6 +22,3 @@ El **Sistema de Garaje** es una aplicación de gestión de garaje que te permite
 4. **Límite de Capacidad**: Cuando el garaje alcanza su capacidad máxima, el sistema emite un aviso para informar a los usuarios que no hay espacio disponible para registrar más vehículos.
 
 5. **Información General**: Los usuarios pueden consultar la información general del garaje, que incluye el número total de vehículos registrados, el costo total del cambio de ruedas y el kilometraje medio de todos los vehículos almacenados.
-
-## Ejemplo de Uso
-
