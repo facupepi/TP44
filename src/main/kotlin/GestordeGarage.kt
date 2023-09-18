@@ -1,7 +1,7 @@
 class GestordeGarage(
     private var costoRueda : Double,
     var cantidadMaxima : Int,
-    private var vehiculos : ArrayList<Vehiculo> = arrayListOf()
+    var vehiculos : ArrayList<Vehiculo> = arrayListOf()
 )
 /*
 Atributos:

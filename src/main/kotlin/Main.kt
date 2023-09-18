@@ -27,7 +27,7 @@ fun main() {
     println("\n----VEHICULOS----\n" + garage.verGuardados() + "----VEHICULOS----\n")
 
     // Imprime la cantidad de vehículos en el garaje (contadorParcial).
-    println("HAY ${garage.contadorParcial} VEHICULOS")
+    println("HAY ${garage.vehiculos.size} VEHICULOS")
 
     // Intenta agregar otro vehículo al garaje (auto3) pero el garage ya está lleno
     garage.agregarVehiculo(auto3)
@@ -39,11 +39,11 @@ fun main() {
     println("\n----VEHICULOS----\n" + garage.verGuardados() + "----VEHICULOS----\n")
 
     // Imprime la cantidad actualizada de vehículos en el garaje.
-    println("HAY ${garage.contadorParcial} VEHICULOS")
+    println("HAY ${garage.vehiculos.size} VEHICULOS")
 
     // Intenta agregar otro vehículo al garaje (auto3)
     garage.agregarVehiculo(auto3)
 
     // Imprime la cantidad final de vehículos en el garaje.
-    println("HAY ${garage.contadorParcial} VEHICULOS")
+    println("HAY ${garage.vehiculos.size} VEHICULOS")
 }
